@@ -1,6 +1,6 @@
 # rashid_khani_id_card
 
-A new Flutter project.
+amazing id card done by flutter.
 
 ## Getting Started
 
