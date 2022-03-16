@@ -7,7 +7,6 @@ const String twitter = "https://twitter.com/rashid_khani";
 const String whatsapp = "https://wa.me/+989306056390";
 const String linkedin = "https://www.linkedin.com/in/rashid-khani-038562123";
 
-
 void main() {
   runApp(
     const MyApp(),
@@ -43,18 +42,19 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.teal.shade900,
+            backgroundColor: Colors.white,
             title: const Center(
               child: Text(
                 'Rashid Khani Id Card',
                 style: TextStyle(
                     fontFamily: 'Pacifico',
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
             ),
           ),
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.white,
           body: SafeArea(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: 'Pacifico',
                     fontSize: 40,
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -80,13 +80,13 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: 'SourceSanPro',
                       fontSize: 20,
-                      color: Colors.teal.shade100,
+                      color: Colors.teal.shade400,
                       letterSpacing: 2.5,
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   child: Divider(
-                    color: Colors.teal.shade100,
+                    color: Colors.teal.shade300,
                   ),
                   width: 150,
                   height: 20,
@@ -109,7 +109,8 @@ class MyApp extends StatelessWidget {
                         style: TextStyle(
                             fontFamily: 'SourceSansPro',
                             color: Colors.teal.shade900,
-                            fontSize: 20),
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
                       )),
                 ),
                 Card(
@@ -123,12 +124,13 @@ class MyApp extends StatelessWidget {
                         style: TextStyle(
                             fontFamily: 'SourceSansPro',
                             color: Colors.teal.shade900,
-                            fontSize: 20),
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
                       )),
                 ),
                 SizedBox(
                   child: Divider(
-                    color: Colors.teal.shade100,
+                    color: Colors.teal.shade300,
                   ),
                   width: 150,
                   height: 20,
@@ -138,7 +140,7 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: 'SourceSanPro',
                       fontSize: 20,
-                      color: Colors.teal.shade100,
+                      color: Colors.teal.shade400,
                       letterSpacing: 2.5,
                       fontWeight: FontWeight.bold),
                 ),
