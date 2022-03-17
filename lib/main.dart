@@ -164,7 +164,7 @@ class MyApp extends StatelessWidget {
                     children: [
                       TextButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue.shade50),
+                            primary: Colors.orange.shade600),
                         onPressed: fbURL,
                         child: Image.asset('images/Facebook.png'),
                       ),
@@ -173,7 +173,7 @@ class MyApp extends StatelessWidget {
                       ),
                       TextButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue.shade50),
+                            primary: Colors.orange.shade600),
                         onPressed: waURL,
                         child: Image.asset('images/Whatsapp.png'),
                       ),
@@ -182,7 +182,7 @@ class MyApp extends StatelessWidget {
                       ),
                       TextButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue.shade50),
+                            primary: Colors.orange.shade600),
                         onPressed: twURL,
                         child: Image.asset('images/twitter.png'),
                       ),
@@ -191,7 +191,7 @@ class MyApp extends StatelessWidget {
                       ),
                       TextButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue.shade50),
+                            primary: Colors.orange.shade600),
                         onPressed: liURL,
                         child: Image.asset('images/Linkedin.png'),
                       ),
@@ -200,7 +200,7 @@ class MyApp extends StatelessWidget {
                       ),
                       TextButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.blue.shade50),
+                            primary: Colors.orange.shade600),
                         onPressed: liURL,
                         child: Image.asset('images/Telegram.png'),
                       )
@@ -216,8 +216,7 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.blue.shade50),
+                        style: ElevatedButton.styleFrom(primary: Colors.orange),
                         onPressed: () {
                           cvURL();
                         },
