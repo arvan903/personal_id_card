@@ -6,6 +6,8 @@ const String facebook = "https://www.facebook.com/rashid.khani.33";
 const String twitter = "https://twitter.com/rashid_khani";
 const String whatsapp = "https://wa.me/+989306056390";
 const String linkedin = "https://www.linkedin.com/in/rashid-khani-038562123";
+const String telegram = 'https://t.me/arvan903';
+const String resume = 'https://cvbuilder.me/share/rashid_khani/en';
 
 void main() {
   runApp(
@@ -36,25 +38,33 @@ class MyApp extends StatelessWidget {
     if (!await launch(github)) throw 'Could not launch $github';
   }
 
+  void telURL() async {
+    if (!await launch(telegram)) throw 'Could not launch $telegram';
+  }
+
+  void cvURL() async {
+    if (!await launch(resume)) throw 'Could not launch $resume';
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.white,
-            title: const Center(
+            backgroundColor: Colors.orange.shade700,
+            title: Center(
               child: Text(
                 'Rashid Khani Id Card',
                 style: TextStyle(
                     fontFamily: 'Pacifico',
-                    color: Colors.black,
+                    color: Colors.blue.shade900,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
             ),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.orange,
           body: SafeArea(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -66,12 +76,12 @@ class MyApp extends StatelessWidget {
                     radius: 50,
                   ),
                 ),
-                const Text(
+                Text(
                   'Rashid Khani',
                   style: TextStyle(
                     fontFamily: 'Pacifico',
                     fontSize: 40,
-                    color: Colors.black,
+                    color: Colors.blue.shade900,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -80,26 +90,22 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: 'SourceSanPro',
                       fontSize: 20,
-                      color: Colors.teal.shade400,
+                      color: Colors.teal.shade900,
                       letterSpacing: 2.5,
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   child: Divider(
-                    color: Colors.teal.shade300,
+                    color: Colors.teal.shade900,
                   ),
                   width: 150,
                   height: 20,
                 ),
                 Card(
-                  // padding: const EdgeInsets.all(10),
+                  color: Colors.blue.shade50,
                   margin:
                       const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                   child: ListTile(
-
-                      // trailing: const Text('Call Me!'),
-
-                      // subtitle: const Text('This Is My Phone Number'),
                       leading: const Icon(
                         Icons.phone,
                         color: Colors.teal,
@@ -114,7 +120,7 @@ class MyApp extends StatelessWidget {
                       )),
                 ),
                 Card(
-                  // padding: EdgeInsets.all(10),
+                  color: Colors.blue.shade50,
                   margin:
                       const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                   child: ListTile(
@@ -130,7 +136,7 @@ class MyApp extends StatelessWidget {
                 ),
                 SizedBox(
                   child: Divider(
-                    color: Colors.teal.shade300,
+                    color: Colors.teal.shade900,
                   ),
                   width: 150,
                   height: 20,
@@ -140,38 +146,89 @@ class MyApp extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: 'SourceSanPro',
                       fontSize: 20,
-                      color: Colors.teal.shade400,
+                      color: Colors.teal.shade900,
                       letterSpacing: 2.5,
                       fontWeight: FontWeight.bold),
+                ),
+                Column(
+                  children: const [
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ],
+                ),
+                Flexible(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue.shade50),
+                        onPressed: fbURL,
+                        child: Image.asset('images/Facebook.png'),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      TextButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue.shade50),
+                        onPressed: waURL,
+                        child: Image.asset('images/Whatsapp.png'),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      TextButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue.shade50),
+                        onPressed: twURL,
+                        child: Image.asset('images/twitter.png'),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      TextButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue.shade50),
+                        onPressed: liURL,
+                        child: Image.asset('images/Linkedin.png'),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      TextButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue.shade50),
+                        onPressed: liURL,
+                        child: Image.asset('images/Telegram.png'),
+                      )
+                    ],
+                  ),
+                ),
+                Column(
+                  children: const [
+                    SizedBox(height: 20),
+                  ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    TextButton(
-                      onPressed: fbURL,
-                      child: Image.asset('images/Facebook.png'),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    TextButton(
-                      onPressed: waURL,
-                      child: Image.asset('images/Whatsapp.png'),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    TextButton(
-                      onPressed: twURL,
-                      child: Image.asset('images/twitter.png'),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    TextButton(
-                      onPressed: liURL,
-                      child: Image.asset('images/Linkedin.png'),
-                    )
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.blue.shade50),
+                        onPressed: () {
+                          cvURL();
+                        },
+                        child: Text(
+                          'Click To View Full CV',
+                          style: TextStyle(
+                              fontFamily: 'SourceSanPro',
+                              letterSpacing: 1,
+                              color: Colors.teal.shade900,
+                              fontSize: 25),
+                        ))
                   ],
                 )
               ],
