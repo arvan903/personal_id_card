@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// in this part you must put your social media and CV links into these variables
 const String github = "https://github.com/arvan903";
 const String facebook = "https://www.facebook.com/rashid.khani.33";
 const String twitter = "https://twitter.com/rashid_khani";
@@ -18,6 +19,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+// these functions are related to your social media links by calling them , browser will lunch
   void fbURL() async {
     if (!await launch(facebook)) throw 'Could not launch $facebook';
   }
@@ -48,6 +50,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //this is the body
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
@@ -55,6 +58,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.orange.shade700,
             title: Center(
               child: Text(
+                // title of the appbar
                 'Rashid Khani Id Card',
                 style: TextStyle(
                     fontFamily: 'Pacifico',
@@ -72,10 +76,12 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const CircleAvatar(
+                      // here is your avatar picture that you must insert it in images folder
                       backgroundImage: AssetImage('images/rashid.jpg'),
                       radius: 50,
                     ),
                     Text(
+                      //your name
                       'Rashid Khani',
                       style: TextStyle(
                         fontFamily: 'Pacifico',
@@ -85,6 +91,7 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     Text(
+                      //your title
                       'Flutter Developer',
                       style: TextStyle(
                           fontFamily: 'SourceSanPro',
@@ -105,7 +112,9 @@ class MyApp extends StatelessWidget {
                       margin: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 25),
                       child: OutlinedButton(
+                        // by calling this it will call the number
                         onPressed: () {
+                          //put your number to call
                           launch('tel:+989306056390');
                         },
                         child: ListTile(
@@ -114,6 +123,7 @@ class MyApp extends StatelessWidget {
                               color: Colors.teal,
                             ),
                             title: Text(
+                              // your phone number
                               '+98 930 605 6390',
                               style: TextStyle(
                                   fontFamily: 'SourceSansPro',
@@ -128,13 +138,16 @@ class MyApp extends StatelessWidget {
                       margin: const EdgeInsets.symmetric(
                           vertical: 10, horizontal: 25),
                       child: OutlinedButton(
+                        //by calling this it will send mail
                         onPressed: () {
                           launch(
+                              // you must edit this line with your personal info
                               'mailto:arvan903@hotmail.com?subject=Contacting you from ID card app title&body=Hello there');
                         },
                         child: ListTile(
                           leading: const Icon(Icons.email, color: Colors.teal),
                           title: Text(
+                            // put your email address
                             'Arvan903@hotmail.com',
                             style: TextStyle(
                                 fontFamily: 'SourceSansPro',
@@ -153,6 +166,7 @@ class MyApp extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
+                      // this part is related to social media links
                       'Social Media',
                       style: TextStyle(
                           fontFamily: 'SourceSanPro',
@@ -174,6 +188,7 @@ class MyApp extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          //by clicking on these buttons the above-functions will call
                           TextButton(
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.orange.shade600),
@@ -236,6 +251,7 @@ class MyApp extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        //this button is for you CV link
                         ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.orange),
